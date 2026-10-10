@@ -1,0 +1,37 @@
+{
+  "name": "dsh-codewhale-snapshot",
+  "version": "0.2.0",
+  "description": "CodeWhale-style turn snapshots for DeepSeek Harness 0.2: per-turn workspace copies with /undo and /restore commands",
+  "type": "module",
+  "main": "lib/index.mjs",
+  "exports": {
+    ".": { "default": "./lib/index.mjs" },
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "README.md"],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-agent": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-commands": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-llm": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-session": "^0.2.1-alpha.2",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-commands": { "optional": true }
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "link:D:/deepseek-aideepseek-harness/vendor/cordis",
+    "@deepseek-ai/dsh-agent": "link:D:/deepseek-aideepseek-harness/packages/core/agent",
+    "@deepseek-ai/dsh-commands": "link:D:/deepseek-aideepseek-harness/packages/interaction/commands",
+    "@deepseek-ai/dsh-llm": "link:D:/deepseek-aideepseek-harness/packages/llm/llm",
+    "@deepseek-ai/dsh-session": "link:D:/deepseek-aideepseek-harness/packages/core/session",
+    "@deepseek-ai/schemastery": "link:D:/deepseek-aideepseek-harness/vendor/schemastery"
+  }
+}

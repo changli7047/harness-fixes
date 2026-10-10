@@ -1,0 +1,9 @@
+{
+  "name": "dsh-codewhale",
+  "version": "0.2.0",
+  "description": "The CodeWhale profile bundle for DeepSeek Harness 0.2: constitution, turn snapshots, and fleet review as one patch layer over the three out-of-tree plugin packages",
+  "type": "module",
+  "files": ["cordis.patch.yml"],
+  "license": "MIT",
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}

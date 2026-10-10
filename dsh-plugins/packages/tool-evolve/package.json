@@ -1,0 +1,37 @@
+{
+  "name": "dsh-tool-evolve",
+  "version": "0.2.0",
+  "description": "Model-facing evolution loop over the workflow and subagent seams for DeepSeek Harness 0.2: a seed, explicit iterations, and per-round nutrients drive fresh structured children that produce formed nodes with regress-triggered backtracking",
+  "type": "module",
+  "main": "lib/index.mjs",
+  "exports": {
+    ".": { "default": "./lib/index.mjs" },
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "cordis.patch.yml", "README.md"],
+  "license": "MIT",
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-subagent": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-tools": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-workflow": "^0.2.1-alpha.2",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "link:D:/deepseek-aideepseek-harness/vendor/cordis",
+    "@deepseek-ai/dsh-llm": "link:D:/deepseek-aideepseek-harness/packages/llm/llm",
+    "@deepseek-ai/dsh-session": "link:D:/deepseek-aideepseek-harness/packages/core/session",
+    "@deepseek-ai/dsh-subagent": "link:D:/deepseek-aideepseek-harness/packages/subagent/subagent",
+    "@deepseek-ai/dsh-system-prompt": "link:D:/deepseek-aideepseek-harness/packages/core/system-prompt",
+    "@deepseek-ai/dsh-tools": "link:D:/deepseek-aideepseek-harness/packages/core/tools",
+    "@deepseek-ai/dsh-util-values": "link:D:/deepseek-aideepseek-harness/packages/util/values",
+    "@deepseek-ai/dsh-workflow": "link:D:/deepseek-aideepseek-harness/packages/workflow/workflow",
+    "@deepseek-ai/schemastery": "link:D:/deepseek-aideepseek-harness/vendor/schemastery"
+  }
+}

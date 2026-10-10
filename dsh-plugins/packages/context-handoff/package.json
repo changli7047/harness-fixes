@@ -1,0 +1,35 @@
+{
+  "name": "dsh-context-handoff",
+  "version": "0.2.0",
+  "description": "Context-bloat handoff observer for DeepSeek Harness 0.2: measures session token pressure on its own clock and past the configured threshold appends a durable handoff notice and backs up project and conversation",
+  "type": "module",
+  "main": "lib/index.mjs",
+  "exports": {
+    ".": { "default": "./lib/index.mjs" },
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "README.md"],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-agent": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-llm": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-session": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-token-meter": "^0.2.1-alpha.2",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "link:D:/deepseek-aideepseek-harness/vendor/cordis",
+    "@deepseek-ai/dsh-agent": "link:D:/deepseek-aideepseek-harness/packages/core/agent",
+    "@deepseek-ai/dsh-agent-default-model": "link:D:/deepseek-aideepseek-harness/packages/core/agent-default-model",
+    "@deepseek-ai/dsh-llm": "link:D:/deepseek-aideepseek-harness/packages/llm/llm",
+    "@deepseek-ai/dsh-session": "link:D:/deepseek-aideepseek-harness/packages/core/session",
+    "@deepseek-ai/dsh-token-meter": "link:D:/deepseek-aideepseek-harness/packages/llm/token-meter",
+    "@deepseek-ai/schemastery": "link:D:/deepseek-aideepseek-harness/vendor/schemastery"
+  }
+}

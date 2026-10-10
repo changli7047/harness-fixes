@@ -1,0 +1,41 @@
+{
+  "name": "dsh-rheostat",
+  "version": "0.2.0",
+  "description": "Per-session style dial (terse \u2194 expressive) for DeepSeek Harness 0.2, distributed as an out-of-tree bundle plugin",
+  "type": "module",
+  "main": "lib/index.mjs",
+  "exports": {
+    ".": { "default": "./lib/index.mjs" },
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "cordis.patch.yml", "README.md"],
+  "license": "MIT",
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-agent": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-commands": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-llm": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-session": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-system-prompt": "^0.2.1-alpha.2",
+    "@deepseek-ai/dsh-tools": "^0.2.1-alpha.2"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-commands": { "optional": true }
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "link:D:/deepseek-aideepseek-harness/vendor/cordis",
+    "@deepseek-ai/dsh-agent": "link:D:/deepseek-aideepseek-harness/packages/core/agent",
+    "@deepseek-ai/dsh-commands": "link:D:/deepseek-aideepseek-harness/packages/interaction/commands",
+    "@deepseek-ai/dsh-llm": "link:D:/deepseek-aideepseek-harness/packages/llm/llm",
+    "@deepseek-ai/dsh-scope": "link:D:/deepseek-aideepseek-harness/packages/core/scope",
+    "@deepseek-ai/dsh-session": "link:D:/deepseek-aideepseek-harness/packages/core/session",
+    "@deepseek-ai/dsh-system-prompt": "link:D:/deepseek-aideepseek-harness/packages/core/system-prompt",
+    "@deepseek-ai/dsh-tools": "link:D:/deepseek-aideepseek-harness/packages/core/tools"
+  }
+}

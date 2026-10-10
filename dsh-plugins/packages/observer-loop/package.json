@@ -1,0 +1,9 @@
+{
+  "name": "dsh-observer-loop",
+  "version": "0.2.0",
+  "description": "The observer resilience profile bundle for DeepSeek Harness 0.2: the hygiene guard (dsh-observer) and the verbatim handoff with automatic backup (dsh-context-handoff) as one patch layer",
+  "type": "module",
+  "files": ["cordis.patch.yml"],
+  "license": "MIT",
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}

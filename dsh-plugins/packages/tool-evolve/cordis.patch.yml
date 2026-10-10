@@ -1,0 +1,9 @@
+- insert:
+    - id: tool-evolve
+      name: dsh-tool-evolve
+      config:
+        subagentProvider: spawn
+        maxIterations: 64
+        maxNodeChars: 16384
+        maxResultChars: 16384
+        nodeMode: workspace
